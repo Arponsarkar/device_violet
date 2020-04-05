@@ -448,3 +448,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+
+# OpenGapps
+GAPPS_VARIANT := pico
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_PRODUCT_PACKAGES += CalendarGooglePrebuilt
+GAPPS_PRODUCT_PACKAGES += LatinImeGoogle
+GAPPS_PRODUCT_PACKAGES += Maps
+GAPPS_PRODUCT_PACKAGES += PrebuiltGmail
+GAPPS_PRODUCT_PACKAGES += YouTube
+GAPPS_EXCLUDED_PACKAGES := GoogleTTS
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
